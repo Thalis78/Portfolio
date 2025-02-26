@@ -1,0 +1,397 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background-home {
+  background: linear-gradient(45deg, #3498db, #2c3e50);
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.navbar .logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1.5px;
+  transition: transform 0.3s ease;
+}
+
+.navbar:hover .logo {
+  transform: translateX(5px);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #dcdde1;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  padding: 12px 20px;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #3498db;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  background-color: #3498db;
+  transform: translateY(-5px);
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+  background: url("home-background.jpg") no-repeat center center/cover;
+  background-position: center;
+  position: relative;
+}
+
+.home-content h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.home-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.home-content .btn {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.home-content .btn:hover {
+  background-color: #2980b9;
+  border: 2px solid #2980b9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.home-content .btn:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+.sobre {
+  padding: 80px 20px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sobre h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #3498db;
+}
+
+.sobre p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.sobre .stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.sobre .stack-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sobre .stack-item:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sobre .stack-item img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.sobre .stack-item p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#style-p {
+  text-align: justify;
+  line-height: 1.8;
+  color: #555;
+}
+
+.social-icons a {
+  font-size: 2.2rem;
+  color: #777;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #3498db;
+  transform: scale(1.1);
+}
+
+.contato {
+  padding: 80px 20px;
+  background-color: #f7f7f7;
+  color: #333;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #3498db;
+}
+
+.contato p {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.contato .social-icons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+.footer .social-icons a {
+  font-size: 2.2rem;
+  color: #fff;
+  transition: color 0.4s ease;
+}
+
+.social-icons img {
+  width: 50px;
+}
+.footer .social-icons a:hover {
+  color: #3498db;
+}
+
+@media (max-width: 1024px) {
+  .home-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+  }
+
+  .home-content .btn {
+    font-size: 1rem;
+  }
+
+  .sobre h2 {
+    font-size: 2.5rem;
+  }
+
+  .footer .social-icons a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+  }
+
+  .home-content .btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .sobre h2 {
+    font-size: 2.3rem;
+  }
+
+  .footer .social-icons a {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .nav-links {
+    margin-left: 30px;
+    flex-direction: row;
+  }
+
+  .navbar .logo {
+    font-size: 1.8rem;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .home-content .btn {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+
+  .sobre h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar .logo {
+    font-size: 1.6rem;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .home-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .home-content p {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .home-content .btn {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+  }
+
+  .sobre h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer .social-icons a {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    align-items: center;
+  }
+}
