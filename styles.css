@@ -32,7 +32,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   z-index: 100;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .navbar .logo {
@@ -40,7 +40,6 @@ body {
   font-weight: 700;
   color: #fff;
   letter-spacing: 1.5px;
-  transition: transform 0.3s ease;
 }
 
 .navbar:hover .logo {
@@ -85,7 +84,6 @@ body {
   text-align: center;
   padding: 0 20px;
   background: url("home-background.jpg") no-repeat center center/cover;
-  background-position: center;
   position: relative;
 }
 
@@ -110,25 +108,18 @@ body {
   background-color: #3498db;
   color: #fff;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: inline-block;
 }
 
 .home-content .btn:hover {
   background-color: #2980b9;
-  border: 2px solid #2980b9;
+  border-color: #2980b9;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-.home-content .btn:focus {
-  outline: none;
-  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
-}
-
 
 .carrossel {
   position: relative;
@@ -193,7 +184,6 @@ body {
   text-decoration: none;
   border-radius: 50px;
   text-transform: uppercase;
-  transition: background-color 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: block;
@@ -205,53 +195,6 @@ body {
 .btn-acessar-projeto:hover {
   background-color: #2980b9;
 }
-
-.btn-acessar-projeto:focus {
-  outline: none;
-  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
-}
-
-.carrossel-imagens img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .carrossel-nav {
-    top: 40%;
-    font-size: 1.5rem;
-  }
-
-  .btn-nav {
-    padding: 8px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .nav-links a {
-    font-size: 1rem;
-    padding: 12px 25px;
-  }
-
-  .nav-links a:hover {
-    background-color: #3498db;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-}
-
-@media (max-width: 480px) {
-  .btn-acessar-projeto {
-    padding: 10px 25px;
-    font-size: 1rem;
-  }
-}
-
 
 .sobre {
   padding: 80px 20px;
@@ -292,7 +235,6 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .sobre .stack-item:hover {
@@ -459,6 +401,10 @@ body {
 
   .sobre h2 {
     font-size: 2rem;
+  }
+
+  .footer .social-icons a {
+    font-size: 1.4rem;
   }
 }
 
