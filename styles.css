@@ -153,18 +153,15 @@ body {
 }
 
 .btn-nav {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: transparent;
   color: #fff;
-  font-size: 1rem;
+  font-size: 3em;
   border: none;
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
 }
 
 .btn-nav:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .contador-imagens {
@@ -375,6 +372,9 @@ body {
   .navbar {
     flex-direction: column;
     padding: 15px;
+  }
+  .btn-nav {
+    font-size: 2em;
   }
 
   .nav-links {
