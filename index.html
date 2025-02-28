@@ -35,7 +35,7 @@
     <section id="sobre" class="sobre">
       <div class="container">
         <h2>Sobre Mim</h2>
-        <p id="style-p">
+        <p class="style-p">
           Sou estudante de
           <strong>Análise e Desenvolvimento de Sistemas</strong> e desenvolvedor
           Full Stack com experiência em projetos utilizando
@@ -132,28 +132,62 @@
         </div>
       </div>
     </section>
+    <section id="projetos" class="projetos">
+      <div class="container">
+        <div class="projeto sobre">
+          <h2>Meus Projetos</h2>
 
+          <h2>Sistema de Achados e Perdidos</h2>
+          <p class="style-p">
+            Este é um sistema de achados e perdidos desenvolvido para o IFPI, com o objetivo de otimizar o controle e a devolução de documentos perdidos no campus. A aplicação foi construída com <strong>Spring Boot</strong> no backend e <strong>HTML, CSS e JavaScript puro</strong> no frontend, utilizando banco de dados <strong>PostgreSQL</strong>. O sistema permite o registro de documentos encontrados, a busca por itens perdidos e o gerenciamento eficiente dos processos de devolução, garantindo praticidade e segurança para estudantes e servidores do IFPI.
+          </p>
+          
+          
+          <div class="carrossel">
+            <div class="carrossel-imagens">
+              <img src="imagens/pj01/img01.png" alt="Imagem 1" class="carrossel-img">
+              <img src="imagens/pj01/img02.png" alt="Imagem 2" class="carrossel-img">
+              <img src="imagens/pj01/img03.png" alt="Imagem 3" class="carrossel-img">
+              <img src="imagens/pj01/img04.png" alt="Imagem 4" class="carrossel-img">
+            </div>
+            <div class="carrossel-nav">
+              <button class="btn-nav prev" aria-label="Imagem Anterior">&#8592;</button>
+              <button class="btn-nav next" aria-label="Próxima Imagem">&#8594;</button>
+            </div>
+            <div class="contador-imagens">
+              <span class="contador">1 / 5</span>
+            </div>
+          </div>
+          <a href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git" class="btn-acessar-projeto">Acessar Projeto</a>
+        </div>
+      </div>
+    </section>
+    
+    
+    
     <section id="contato" class="contato">
       <div class="container">
         <h2>Redes Sociais</h2>
         <p>Você pode me encontrar nas seguintes redes sociais:</p>
         <div class="social-icons">
-          <a href="https://www.instagram.com/_thalissonmv/"
-            ><img
+          <a href="https://www.instagram.com/_thalissonmv/">
+            <img
               src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
               alt=""
-          /></a>
-          <a
-            href="https://www.linkedin.com/in/thalisson-moura-383ba4275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-            ><img
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/thalisson-moura-383ba4275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+            <img
               src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
               alt=""
-          /></a>
-          <a href="https://github.com/Thalis78"
-            ><img
+            />
+          </a>
+          <a href="https://github.com/Thalis78">
+            <img
               src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000"
               alt=""
-          /></a>
+            />
+          </a>
         </div>
       </div>
     </section>
@@ -161,6 +195,46 @@
     <footer class="footer">
       <p>&copy; 2025 Thalisson. Todos os direitos reservados.</p>
     </footer>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      const images = document.querySelectorAll('.carrossel-img');
+      const prevButton = document.querySelector('.btn-nav.prev');
+      const nextButton = document.querySelector('.btn-nav.next');
+      const imageCounter = document.querySelector('.contador');
+      let currentIndex = 0;
 
+      function showImage(index) {
+        if (index < 0) {
+          currentIndex = images.length - 1;
+        } else if (index >= images.length) {
+          currentIndex = 0;
+        } else {
+          currentIndex = index;
+        }
+
+        imageCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+
+        images.forEach((img, i) => {
+          img.style.display = i === currentIndex ? 'block' : 'none';
+        });
+      }
+
+      function nextImage() {
+        showImage(currentIndex + 1);
+      }
+
+      function prevImage() {
+        showImage(currentIndex - 1);
+      }
+
+      nextButton.addEventListener('click', nextImage);
+
+      prevButton.addEventListener('click', prevImage);
+
+      showImage(currentIndex);
+});
+
+    </script>
   </body>
 </html>
