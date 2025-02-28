@@ -473,7 +473,11 @@ body {
   }
 
   .nav-links {
-    gap: 15px;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.8em;
   }
 
   .home-content h1 {
