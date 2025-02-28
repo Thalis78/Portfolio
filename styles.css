@@ -164,7 +164,7 @@ body {
 .btn-nav {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -224,7 +224,6 @@ body {
   }
 
   .btn-nav {
-    font-size: 1.5rem;
     padding: 8px;
   }
 
