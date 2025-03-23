@@ -154,7 +154,7 @@ body {
 
 .btn-nav {
   background: transparent;
-  color: #fff;
+  color: black;
   font-size: 3em;
   border: none;
   padding: 12px;
@@ -213,6 +213,16 @@ body {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.8;
+}
+
+.minha-imagem {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 30px;
 }
 
 .sobre .stack {
