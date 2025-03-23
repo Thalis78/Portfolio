@@ -38,18 +38,20 @@
     <section id="sobre" class="sobre">
       <div class="container">
         <h2>Sobre Mim</h2>
-        <p class="style-p">
-          Sou estudante de
-          <strong>Análise e Desenvolvimento de Sistemas</strong> e desenvolvedor
-          Full Stack com experiência em projetos utilizando
-          <strong>Java Spring</strong> no backend, <strong>React</strong> no
-          frontend e bancos de dados relacionais como <strong>MySQL</strong> e
-          <strong>PostgreSQL</strong>. Tenho conhecimento em
-          <strong>Git</strong> para controle de versões e estou sempre em busca
-          de aprender novas tecnologias para melhorar minhas habilidades e
-          entregar soluções de qualidade.
-        </p>
-
+        <div class="sobre-conteudo">
+          <img src="/imagens/me.jpeg" alt="Sua Foto" class="minha-imagem" />
+          <p class="style-p">
+            Sou estudante de
+            <strong>Análise e Desenvolvimento de Sistemas</strong> e
+            desenvolvedor Full Stack com experiência em projetos utilizando
+            <strong>Java Spring</strong> no backend, <strong>React</strong> no
+            frontend e bancos de dados relacionais como <strong>MySQL</strong> e
+            <strong>PostgreSQL</strong>. Tenho conhecimento em
+            <strong>Git</strong> para controle de versões e estou sempre em
+            busca de aprender novas tecnologias para melhorar minhas habilidades
+            e entregar soluções de qualidade.
+          </p>
+        </div>
         <h3>Minhas principais habilidades incluem:</h3>
         <div class="stack">
           <div class="stack-item">
@@ -137,6 +139,7 @@
     </section>
     <section id="projetos" class="projetos">
       <div class="container">
+        <!-- Primeiro Projeto -->
         <div class="projeto sobre">
           <h2>Meus Projetos</h2>
 
@@ -153,7 +156,8 @@
             praticidade e segurança para estudantes e servidores do IFPI.
           </p>
 
-          <div class="carrossel">
+          <!-- Carrossel do Primeiro Projeto -->
+          <div class="carrossel" id="carrossel1">
             <div class="carrossel-imagens">
               <img
                 src="imagens/pj01/img01.png"
@@ -194,6 +198,67 @@
             >Acessar Projeto</a
           >
         </div>
+
+        <!-- Segundo Projeto -->
+        <div class="projeto sobre">
+          <h3>Mostruário da Loja de Doces Maravi</h3>
+          <p class="style-p">
+            O projeto "Maravi" é uma aplicação desenvolvida para ser o
+            mostruário digital de uma micro loja de doces. A plataforma foi
+            criada com foco na experiência do usuário, utilizando
+            <strong>HTML, CSS e JavaScript</strong> puros, juntamente com o
+            poderoso framework <strong>Tailwind CSS</strong>, que garantiu uma
+            interface moderna e totalmente responsiva. O sistema permite uma
+            navegação simples e intuitiva, oferecendo aos clientes uma
+            visualização clara e agradável dos produtos disponíveis.
+          </p>
+
+          <div class="carrossel" id="carrossel2">
+            <div class="carrossel-imagens">
+              <img
+                src="imagens/pj02/img01.png"
+                alt="Imagem 1"
+                class="carrossel-img"
+              />
+              <img
+                src="imagens/pj02/img02.png"
+                alt="Imagem 2"
+                class="carrossel-img"
+              />
+              <img
+                src="imagens/pj02/img03.png"
+                alt="Imagem 3"
+                class="carrossel-img"
+              />
+              <img
+                src="imagens/pj02/img04.png"
+                alt="Imagem 4"
+                class="carrossel-img"
+              />
+              <img
+                src="imagens/pj02/img05.png"
+                alt="Imagem 5"
+                class="carrossel-img"
+              />
+            </div>
+            <div class="carrossel-nav">
+              <button class="btn-nav prev" aria-label="Imagem Anterior">
+                &#8592;
+              </button>
+              <button class="btn-nav next" aria-label="Próxima Imagem">
+                &#8594;
+              </button>
+            </div>
+            <div class="contador-imagens">
+              <span class="contador">1 / 5</span>
+            </div>
+          </div>
+          <a
+            href="https://marividocegourmet.netlify.app/"
+            class="btn-acessar-projeto"
+            >Acessar SITE</a
+          >
+        </div>
       </div>
     </section>
 
@@ -230,6 +295,6 @@
       <p>&copy; 2025 Thalisson. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
