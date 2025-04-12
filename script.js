@@ -1,73 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const carrossel1 = document.querySelector("#carrossel1");
-  const images1 = carrossel1.querySelectorAll(".carrossel-img");
-  const prevButton1 = carrossel1.querySelector(".btn-nav.prev");
-  const nextButton1 = carrossel1.querySelector(".btn-nav.next");
-  const imageCounter1 = carrossel1.querySelector(".contador");
-  let currentIndex1 = 0;
+const template = document.getElementById("icons").content;
 
-  function showImage1(index) {
-    if (index < 0) {
-      currentIndex1 = images1.length - 1;
-    } else if (index >= images1.length) {
-      currentIndex1 = 0;
-    } else {
-      currentIndex1 = index;
-    }
+const row1 = document.getElementById("icon-row-1");
+const row2 = document.getElementById("icon-row-2");
 
-    imageCounter1.textContent = `${currentIndex1 + 1} / ${images1.length}`;
+for (let i = 0; i < 5; i++) {
+  row1.appendChild(template.cloneNode(true));
+}
+for (let i = 0; i < 5; i++) {
+  row2.appendChild(template.cloneNode(true));
+}
 
-    images1.forEach((img, i) => {
-      img.style.display = i === currentIndex1 ? "block" : "none";
-    });
-  }
+document.querySelectorAll("img").forEach((img) => {
+  img.addEventListener("click", () => {
+    img.classList.remove("animated-click");
+    img.classList.add("animated-click");
+  });
+});
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector(".nav-links.md\\:hidden");
 
-  function nextImage1() {
-    showImage1(currentIndex1 + 1);
-  }
+nav.innerHTML = `
+  <li><a href="#home" class="hover:text-blue-400 block py-2">Home</a></li>
+  <li><a href="#sobre" class="hover:text-blue-400 block py-2">Sobre</a></li>
+  <li><a href="#projetos" class="hover:text-blue-400 block py-2">Projetos</a></li>
+  <li><a href="#contato" class="hover:text-blue-400 block py-2">Contato</a></li>
 
-  function prevImage1() {
-    showImage1(currentIndex1 - 1);
-  }
+`;
 
-  nextButton1.addEventListener("click", nextImage1);
-  prevButton1.addEventListener("click", prevImage1);
-
-  showImage1(currentIndex1);
-
-  const carrossel2 = document.querySelector("#carrossel2");
-  const images2 = carrossel2.querySelectorAll(".carrossel-img");
-  const prevButton2 = carrossel2.querySelector(".btn-nav.prev");
-  const nextButton2 = carrossel2.querySelector(".btn-nav.next");
-  const imageCounter2 = carrossel2.querySelector(".contador");
-  let currentIndex2 = 0;
-
-  function showImage2(index) {
-    if (index < 0) {
-      currentIndex2 = images2.length - 1;
-    } else if (index >= images2.length) {
-      currentIndex2 = 0;
-    } else {
-      currentIndex2 = index;
-    }
-
-    imageCounter2.textContent = `${currentIndex2 + 1} / ${images2.length}`;
-
-    images2.forEach((img, i) => {
-      img.style.display = i === currentIndex2 ? "block" : "none";
-    });
-  }
-
-  function nextImage2() {
-    showImage2(currentIndex2 + 1);
-  }
-
-  function prevImage2() {
-    showImage2(currentIndex2 - 1);
-  }
-
-  nextButton2.addEventListener("click", nextImage2);
-  prevButton2.addEventListener("click", prevImage2);
-
-  showImage2(currentIndex2);
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+  nav.classList.toggle("active");
 });
