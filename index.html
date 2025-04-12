@@ -3,310 +3,373 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <title>Portfólio | Thalisson</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css" />
+
     <link
       rel="icon"
       href="https://img.icons8.com/?size=100&id=Meg71w7epZVz&format=png&color=000000"
     />
   </head>
-  <body>
-    <div class="background-home">
-      <nav class="navbar">
-        <div class="logo">Thalisson</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
+
+  <body class="bg-gray-100 text-gray-900">
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-70 backdrop-blur-md"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-white text-3xl font-bold">Thalisson</h1>
+
+        <div class="menu-toggle md:hidden" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul
+          class="nav-links hidden md:flex gap-6 text-sm font-medium text-gray-300 uppercase"
+        >
+          <li><a href="#home" class="hover:text-white transition">Home</a></li>
+          <li>
+            <a href="#sobre" class="hover:text-white transition">Sobre</a>
+          </li>
+          <li>
+            <a href="#projetos" class="hover:text-white transition">Projetos</a>
+          </li>
+          <li>
+            <a href="#contato" class="hover:text-white transition">Contato</a>
+          </li>
         </ul>
       </nav>
 
-      <section id="home" class="home">
-        <img src="./imagens/img.jpeg" alt="" />
+      <ul
+        class="nav-links md:hidden absolute right-6 top-20 text-white font-medium text-sm uppercase"
+      ></ul>
+    </header>
 
-        <div class="home-content">
-          <h1>Olá, eu sou Thalisson</h1>
-          <p>Desenvolvedor Full Stack</p>
-          <a href="#sobre" class="btn">Saiba mais</a>
+    <section
+      id="home"
+      class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1950&q=80');
+      "
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative z-10 px-4 fade-in">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Olá, eu sou Thalisson
+        </h1>
+        <p class="text-xl md:text-2xl mb-6">Desenvolvedor Full Stack</p>
+        <a
+          href="#sobre"
+          class="inline-block bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-full text-white font-semibold"
+          >Saiba mais</a
+        >
+      </div>
+    </section>
+
+    <section id="sobre" class="py-24 px-6 max-w-7xl mx-auto">
+      <h3 class="text-center text-4xl font-semibold mb-12 text-gray-800">
+        SOBRE MIM:
+      </h3>
+      <div
+        class="flex flex-col md:flex-row items-center justify-between gap-12"
+      >
+        <div
+          class="w-64 h-64 rounded-full overflow-hidden border-8 border-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl hover:scale-105 transition duration-300"
+        >
+          <img
+            src="/imagens/me.jpeg"
+            alt="Sua Foto"
+            class="w-full h-full object-cover"
+          />
         </div>
-      </section>
-    </div>
-    <section id="sobre" class="sobre">
-      <div class="container">
-        <h2>Sobre Mim</h2>
-        <div class="sobre-conteudo">
-          <img src="/imagens/me.jpeg" alt="Sua Foto" class="minha-imagem" />
-          <p class="style-p">
+        <div class="flex-1 text-center md:text-left">
+          <p class="text-gray-700 text-lg md:text-xl leading-relaxed mb-6">
             Sou estudante de
-            <strong>Análise e Desenvolvimento de Sistemas</strong> e
-            desenvolvedor Full Stack com experiência em projetos utilizando
-            <strong>Java Spring</strong> no backend, <strong>React</strong> no
-            frontend e bancos de dados relacionais como <strong>MySQL</strong> e
-            <strong>PostgreSQL</strong>. Tenho conhecimento em
-            <strong>Git</strong> para controle de versões e estou sempre em
-            busca de aprender novas tecnologias para melhorar minhas habilidades
-            e entregar soluções de qualidade.
+            <strong class="text-indigo-600"
+              >Análise e Desenvolvimento de Sistemas</strong
+            >
+            e desenvolvedor Full Stack com experiência em projetos utilizando
+            <strong class="text-indigo-600">Java Spring</strong> no backend,
+            <strong class="text-indigo-600">React</strong> no frontend e bancos
+            de dados relacionais como
+            <strong class="text-indigo-600">MySQL</strong> e
+            <strong class="text-indigo-600">PostgreSQL</strong>. Tenho
+            conhecimento em <strong class="text-indigo-600">Git</strong> para
+            controle de versões e estou sempre em busca de aprender novas
+            tecnologias para melhorar minhas habilidades e entregar soluções de
+            qualidade.
           </p>
         </div>
-        <h3>Minhas principais habilidades incluem:</h3>
-        <div class="stack">
-          <div class="stack-item">
-            <img
-              src="https://camo.githubusercontent.com/69d0679d96a7c4f46daba433ba382bfeb11d4d990f5b7394a461f0e8b4f1cbf4/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f6a6176612f6a6176612d6f726967696e616c2e737667"
-              alt="Java"
-            />
-            <p>Java</p>
-          </div>
-          <div class="stack-item">
-            <img
-              src="https://camo.githubusercontent.com/89065c686c9de43df679e0e844e1f27a921c783deefbe92bc91a48db8b9d0473/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f737072696e672f737072696e672d6f726967696e616c2e737667"
-              alt="Spring"
-            />
-            <p>Spring Boot</p>
-          </div>
-          <div class="stack-item">
-            <img
-              src="https://img.icons8.com/?size=100&id=iWpVsSkAqPpZ&format=png&color=000000"
-              alt="Thymeleaf"
-            />
-            <p>Thymeleaf</p>
-          </div>
+      </div>
+    </section>
 
-          <div class="stack-item">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-              alt="React"
-            />
-            <p>React</p>
-          </div>
-          <div class="stack-item">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-              alt="JavaScript"
-            />
-            <p>JavaScript</p>
-          </div>
-          <div class="stack-item">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-              alt="HTML"
-            />
-            <p>HTML</p>
-          </div>
-          <div class="stack-item">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-              alt="CSS"
-            />
-            <p>CSS</p>
-          </div>
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <h3 class="text-center text-4xl font-semibold mb-12 text-gray-800">
+          MEUS CONHECIMENTOS:
+        </h3>
 
-          <div class="stack-item">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
-              alt="Git"
-            />
-            <p>Git</p>
-          </div>
-          <div class="stack-item">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
-              alt="GitHub"
-            />
-            <p>GitHub</p>
-          </div>
-          <div class="stack-item">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
-              alt="PostgreSQL"
-            />
-            <p>PostgreSQL</p>
-          </div>
+        <div class="overflow-x-auto bg-white rounded-xl shadow-lg p-6">
+          <table class="min-w-full table-auto text-sm text-left">
+            <thead class="bg-gray-200 text-gray-800">
+              <tr>
+                <th class="px-6 py-3 text-lg font-medium">
+                  Área de Desenvolvimento
+                </th>
+                <th class="px-6 py-3 text-lg font-medium">Porcentagem</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium">Back-End</td>
+                <td class="px-6 py-4">
+                  <div
+                    class="w-full bg-gray-200 h-3 rounded-full overflow-hidden"
+                  >
+                    <div class="h-3 bg-indigo-600 w-3/4 rounded-full"></div>
+                  </div>
+                  <p class="mt-2 text-right font-semibold">75%</p>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium">Banco de Dados</td>
+                <td class="px-6 py-4">
+                  <div
+                    class="w-full bg-gray-200 h-3 rounded-full overflow-hidden"
+                  >
+                    <div class="h-3 bg-indigo-600 w-3/5 rounded-full"></div>
+                  </div>
+                  <p class="mt-2 text-right font-semibold">60%</p>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium">Front-End</td>
+                <td class="px-6 py-4">
+                  <div
+                    class="w-full bg-gray-200 h-3 rounded-full overflow-hidden"
+                  >
+                    <div class="h-3 bg-indigo-600 w-1/2 rounded-full"></div>
+                  </div>
+                  <p class="mt-2 text-right font-semibold">50%</p>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium">Design</td>
+                <td class="px-6 py-4">
+                  <div
+                    class="w-full bg-gray-200 h-3 rounded-full overflow-hidden"
+                  >
+                    <div class="h-3 bg-indigo-600 w-[45%] rounded-full"></div>
+                  </div>
+                  <p class="mt-2 text-right font-semibold">45%</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br />
+      <br />
+      <h3 class="text-center text-4xl font-semibold mb-8 text-gray-800">
+        TECNOLOGIAS/LINGUAGEM:
+      </h3>
+      <div class="max-w-[1000px] mx-auto px-4">
+        <div class="marquee-wrapper overflow-hidden">
+          <div class="marquee-content">
+            <div class="flex gap-10">
+              <template id="icons">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://img.icons8.com/?size=100&id=iWpVsSkAqPpZ&format=png&color=000000"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                  class="w-16 h-16 cursor-pointer"
+                />
+              </template>
 
-          <div class="stack-item">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-              alt="MySQL"
-            />
-            <p>MySQL</p>
+              <div class="flex gap-20" id="icon-row-1"></div>
+              <div class="flex gap-20" id="icon-row-2"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="projetos" class="projetos">
-      <div class="container">
-        <!-- Primeiro Projeto -->
-        <div class="projeto sobre">
-          <h2>Meus Projetos</h2>
+    <section
+      id="projetos"
+      class="py-20 px-6 bg-gradient-to-b from-gray-200 to-gray-100"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h3 class="text-center text-4xl font-semibold mb-12 text-gray-800">
+          MEUS PROJETOS:
+        </h3>
 
-          <h3>Sistema de Achados e Perdidos</h3>
-          <p class="style-p">
-            Este é um sistema de achados e perdidos desenvolvido para o IFPI,
-            com o objetivo de otimizar o controle e a devolução de documentos
-            perdidos no campus. A aplicação foi construída com
-            <strong>Spring Boot</strong> no backend e
-            <strong>HTML, CSS e JavaScript puro</strong> no frontend, utilizando
-            banco de dados <strong>PostgreSQL</strong>. O sistema permite o
-            registro de documentos encontrados, a busca por itens perdidos e o
-            gerenciamento eficiente dos processos de devolução, garantindo
-            praticidade e segurança para estudantes e servidores do IFPI.
-          </p>
-
-          <!-- Carrossel do Primeiro Projeto -->
-          <div class="carrossel" id="carrossel1">
-            <div class="carrossel-imagens">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols- gap-12">
+          <div
+            class="project-card bg-white rounded-lg shadow-xl overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <a
+              href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git"
+              target="_blank"
+            >
               <img
                 src="imagens/pj01/img01.png"
-                alt="Imagem 1"
-                class="carrossel-img"
+                alt="Sistema de Achados e Perdidos"
+                class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-300"
               />
-              <img
-                src="imagens/pj01/img02.png"
-                alt="Imagem 2"
-                class="carrossel-img"
-              />
-              <img
-                src="imagens/pj01/img03.png"
-                alt="Imagem 3"
-                class="carrossel-img"
-              />
-              <img
-                src="imagens/pj01/img04.png"
-                alt="Imagem 4"
-                class="carrossel-img"
-              />
-            </div>
-            <div class="carrossel-nav">
-              <button class="btn-nav prev" aria-label="Imagem Anterior">
-                &#8592;
-              </button>
-              <button class="btn-nav next" aria-label="Próxima Imagem">
-                &#8594;
-              </button>
-            </div>
-            <div class="contador-imagens">
-              <span class="contador">1 / 5</span>
+            </a>
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Sistema de Achados e Perdidos
+              </h3>
+              <p class="text-gray-700 mb-6">
+                Sistema para otimizar o controle e devolução de documentos
+                perdidos no IFPI, utilizando Spring Boot no backend e
+                PostgreSQL.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git"
+                  target="_blank"
+                  class="text-indigo-600 hover:text-indigo-800 font-semibold"
+                >
+                  Acessar Repositório
+                </a>
+              </div>
             </div>
           </div>
-          <a
-            href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git"
-            class="btn-acessar-projeto"
-            >Acessar Projeto</a
+
+          <div
+            class="project-card bg-white rounded-lg shadow-xl overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
           >
-        </div>
-
-        <div class="projeto sobre">
-          <h3>Mostruário da Loja de Doces Maravi</h3>
-          <p class="style-p">
-            O "Maravi" é um projeto de aplicação criado como um mostruário
-            digital para uma micro loja de doces. Focada na experiência do
-            usuário, a plataforma foi construída utilizando
-            <strong>HTML, CSS e JavaScript</strong> puros, além do poderoso
-            framework <strong>Tailwind CSS</strong>, que proporcionou uma
-            interface moderna e totalmente responsiva. O sistema oferece uma
-            navegação intuitiva, permitindo que os clientes visualizem os
-            produtos de maneira clara e agradável.
-          </p>
-
-          <div class="carrossel" id="carrossel2">
-            <div class="carrossel-imagens">
+            <a href="https://marividocegourmet.netlify.app/" target="_blank">
               <img
                 src="imagens/pj02/img01.png"
-                alt="Imagem 1"
-                class="carrossel-img"
+                alt="Mostruário da Loja de Doces Maravi"
+                class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-300"
               />
-              <img
-                src="imagens/pj02/img02.png"
-                alt="Imagem 2"
-                class="carrossel-img"
-              />
-              <img
-                src="imagens/pj02/img03.png"
-                alt="Imagem 3"
-                class="carrossel-img"
-              />
-              <img
-                src="imagens/pj02/img04.png"
-                alt="Imagem 4"
-                class="carrossel-img"
-              />
-              <img
-                src="imagens/pj02/img05.png"
-                alt="Imagem 5"
-                class="carrossel-img"
-              />
-              <img
-                src="imagens/pj02/img06.png"
-                alt="Imagem 6"
-                class="carrossel-img"
-              />
-              <img
-                src="imagens/pj02/img07.png"
-                alt="Imagem 7"
-                class="carrossel-img"
-              />
-              <img
-                src="imagens/pj02/img08.png"
-                alt="Imagem 8"
-                class="carrossel-img"
-              />
-            </div>
-            <div class="carrossel-nav">
-              <button class="btn-nav prev" aria-label="Imagem Anterior">
-                &#8592;
-              </button>
-              <button class="btn-nav next" aria-label="Próxima Imagem">
-                &#8594;
-              </button>
-            </div>
-            <div class="contador-imagens">
-              <span class="contador">1 / 8</span>
+            </a>
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Mostruário da Loja de Doces Maravi
+              </h3>
+              <p class="text-gray-700 mb-6">
+                Mostruário digital para a loja de doces "Maravi", com interface
+                moderna e responsiva, construída com HTML, CSS e Tailwind CSS.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="https://marividocegourmet.netlify.app/"
+                  target="_blank"
+                  class="text-indigo-600 hover:text-indigo-800 font-semibold"
+                >
+                  Acessar Site
+                </a>
+              </div>
             </div>
           </div>
-          <a
-            href="https://marividocegourmet.netlify.app/"
-            class="btn-acessar-projeto"
-            >Acessar SITE</a
-          >
         </div>
       </div>
     </section>
 
-    <section id="contato" class="contato">
-      <div class="container">
-        <h2>Redes Sociais</h2>
-        <p>Você pode me encontrar nas seguintes redes sociais:</p>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/_thalissonmv/">
-            <img
-              src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
-              alt=""
-            />
-          </a>
+    <footer
+      id="contato"
+      class="bg-gradient-to-tr from-indigo-800 to-indigo-600 text-white py-12 mt-20"
+    >
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-3">Vamos nos conectar</h2>
+        <p class="text-gray-200 text-lg mb-8">
+          Me acompanhe nas redes sociais:
+        </p>
+
+        <div class="flex justify-center gap-8 mb-8">
           <a
-            href="https://www.linkedin.com/in/thalisson-moura-383ba4275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            href="https://www.instagram.com/_thalissonmv/"
+            target="_blank"
+            class="hover:scale-110 transition-transform duration-300"
+            aria-label="Instagram"
           >
             <img
-              src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
-              alt=""
+              src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=ffffff"
+              alt="Instagram"
+              class="w-10 h-10"
             />
           </a>
-          <a href="https://github.com/Thalis78">
+
+          <a
+            href="https://www.linkedin.com/in/thalisson-moura-383ba4275"
+            target="_blank"
+            class="hover:scale-110 transition-transform duration-300"
+            aria-label="LinkedIn"
+          >
             <img
-              src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000"
-              alt=""
+              src="https://img.icons8.com/?size=100&id=13930&format=png&color=ffffff"
+              alt="LinkedIn"
+              class="w-10 h-10"
+            />
+          </a>
+
+          <a
+            href="https://github.com/Thalis78"
+            target="_blank"
+            class="hover:scale-110 transition-transform duration-300"
+            aria-label="GitHub"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=16318&format=png&color=ffffff"
+              alt="GitHub"
+              class="w-10 h-10"
             />
           </a>
         </div>
-      </div>
-    </section>
 
-    <footer class="footer">
-      <p>&copy; 2025 Thalisson. Todos os direitos reservados.</p>
+        <div class="border-t border-white/20 pt-4">
+          <p class="text-sm text-gray-300">
+            &copy; 2025 Thalisson. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="/script.js"></script>
