@@ -52,22 +52,28 @@
 
     <section
       id="home"
-      class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center"
+      class="relative min-h-screen flex items-center justify-center text-center text-white bg-cover bg-center"
       style="
         background-image: url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1950&q=80');
       "
     >
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div class="relative z-10 px-4 fade-in">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+      <div
+        class="relative z-10 px-6 max-w-xl mx-auto flex flex-col justify-center h-full"
+      >
+        <h1 class="text-4xl md:text-6xl mb-6 leading-tight font-normal">
           Olá, eu sou Thalisson
         </h1>
-        <p class="text-xl md:text-2xl mb-6">Desenvolvedor Full Stack</p>
+        <p class="text-xl md:text-2xl mb-8 font-normal">
+          Desenvolvedor Full Stack
+        </p>
         <a
           href="#sobre"
-          class="inline-block bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-full text-white font-semibold"
-          >Saiba mais</a
+          class="self-center bg-purple-600 hover:bg-purple-700 transition px-8 py-4 rounded-full text-white font-normal shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-400"
         >
+          Saiba mais
+        </a>
       </div>
     </section>
 
@@ -302,7 +308,7 @@
                   <div
                     class="w-16 h-16 overflow-hidden flex items-center justify-center"
                   >
-                    <img
+                    <imgf
                       src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
                       alt="Git"
                       class="w-full h-full object-contain"
@@ -345,18 +351,63 @@
         </div>
       </div>
     </section>
-    <section
-      id="projetos"
-      class="py-20 px-6 bg-gradient-to-b from-gray-200 to-gray-100"
-    >
+
+    <section id="projetos" class="py-24 px-6 bg-gray-50">
       <div class="max-w-7xl mx-auto">
-        <h3 class="text-center text-4xl font-semibold mb-12 text-gray-800">
-          MEUS PROJETOS:
+        <h3 class="text-center text-5xl font-extrabold text-gray-800 mb-16">
+          <span class="inline-block border-b-4 border-indigo-500 pb-2"
+            >Meus Projetos</span
+          >
         </h3>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"
+        >
           <div
-            class="project-card bg-white rounded-lg shadow-xl overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden"
+          >
+            <a href="https://pizzariafav.com/favorita" target="_blank">
+              <img
+                src="imagens/pj04/img01.png"
+                alt="Pizzaria Favorita"
+                class="w-full aspect-[4/3] object-cover"
+              />
+            </a>
+            <div class="p-5 flex flex-col flex-grow">
+              <h4
+                class="text-lg font-bold text-gray-800 flex items-center gap-2 mb-2"
+              >
+                🍕 Pizzaria Favorita
+              </h4>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Sistema completo com autenticação, pedidos e painel admin. Java
+                17 + Spring Boot + PostgreSQL.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs mb-4">
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >Java</span
+                >
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >Spring</span
+                >
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >Tailwind</span
+                >
+              </div>
+              <div class="mt-auto">
+                <a
+                  href="https://github.com/Thalis78/pizzaria-favorita"
+                  target="_blank"
+                  class="inline-block bg-indigo-600 text-white px-4 py-2 text-sm rounded hover:bg-indigo-700 transition"
+                >
+                  🔗 Ver Sites
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden"
           >
             <a
               href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git"
@@ -364,41 +415,43 @@
             >
               <img
                 src="imagens/pj01/img01.png"
-                alt="Sistema de Achados e Perdidos"
-                class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-300"
+                alt="Achados e Perdidos"
+                class="w-full aspect-[4/3] object-cover"
               />
             </a>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-                Sistema de Achados e Perdidos
-              </h3>
-              <p class="text-gray-700 mb-6">
-                Sistema desenvolvido para otimizar o controle e a devolução de
-                documentos perdidos no IFPI. A aplicação conta com um
-                <strong class="text-indigo-600"
-                  >backend robusto em Spring Boot</strong
-                >
-                e
-                <strong class="text-indigo-600"
-                  >banco de dados PostgreSQL</strong
-                >, além de uma
-                <strong class="text-indigo-600">interface frontend</strong>
-                construída com HTML, CSS e JavaScript puro.
+            <div class="p-5 flex flex-col flex-grow">
+              <h4 class="text-lg font-bold text-gray-800 mb-2">
+                📂 Achados e Perdidos
+              </h4>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Sistema para gerenciar itens perdidos, com Spring Boot,
+                PostgreSQL e frontend JS puro.
               </p>
-
-              <div class="flex justify-between items-center">
+              <div class="flex flex-wrap gap-2 text-xs mb-4">
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >Spring</span
+                >
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >PostgreSQL</span
+                >
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >Vanilla JS</span
+                >
+              </div>
+              <div class="mt-auto">
                 <a
                   href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git"
                   target="_blank"
-                  class="text-indigo-600 hover:text-indigo-800 font-semibold"
+                  class="inline-block bg-indigo-600 text-white px-4 py-2 text-sm rounded hover:bg-indigo-700"
                 >
-                  Acessar Repositório
+                  🔗 Ver Repositório
                 </a>
               </div>
             </div>
           </div>
+
           <div
-            class="project-card bg-white rounded-lg shadow-xl overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden"
           >
             <a
               href="https://pj-curriculo-react-production.up.railway.app/"
@@ -407,67 +460,76 @@
               <img
                 src="imagens/pj03/img01.png"
                 alt="Currículo Interativo"
-                class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-300"
+                class="w-full aspect-[4/3] object-cover"
               />
             </a>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-                Currículo Interativo
-              </h3>
-              <p class="text-gray-700 mb-6">
-                Plataforma web para criação de currículos dinâmicos e
-                personalizados com suporte a troca de layouts, exportação em PDF
-                ajustada para A4 e edição de conteúdo em tempo real.
-                Desenvolvido utilizando
-                <strong class="text-indigo-600">React</strong> e
-                <strong class="text-indigo-600">Tailwind CSS</strong>.
+            <div class="p-5 flex flex-col flex-grow">
+              <h4 class="text-lg font-bold text-gray-800 mb-2">
+                🧾 Currículo Interativo
+              </h4>
+              <p class="text-gray-600 text-sm mb-4">
+                Plataforma de criação de currículos com React, exportação em PDF
+                e edição ao vivo.
               </p>
-
-              <div class="flex justify-between items-center">
-                <a
-                  href="https://pj-curriculo-react-production.up.railway.app/"
-                  target="_blank"
-                  class="text-indigo-600 hover:text-indigo-800 font-semibold"
+              <div class="flex flex-wrap gap-2 text-xs mb-4">
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >React</span
                 >
-                  Acessar Site
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >Tailwind</span
+                >
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >PDF</span
+                >
+              </div>
+              <div class="mt-auto">
+                <a
+                  href="https://github.com/Thalis78/PJ-CURRICULO-REACT.git"
+                  target="_blank"
+                  class="inline-block bg-indigo-600 text-white px-4 py-2 text-sm rounded hover:bg-indigo-700"
+                >
+                  🔗 Ver Repositório
                 </a>
               </div>
             </div>
           </div>
 
           <div
-            class="project-card bg-white rounded-lg shadow-xl overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden"
           >
             <a href="https://marividocegourmet.netlify.app/" target="_blank">
               <img
                 src="imagens/pj02/img01.png"
-                alt="Mostruário da Loja de Doces Maravi"
-                class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-300"
+                alt="Maravi Doces"
+                class="w-full aspect-[4/3] object-cover"
               />
             </a>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-                Mostruário da Loja de Doces Maravi
-              </h3>
-              <p class="text-gray-700 mb-6">
-                Mostruário digital desenvolvido para a loja de doces
-                <strong class="text-indigo-600">Maravi</strong>, com uma
-                interface
-                <strong class="text-indigo-600"
-                  >moderna, intuitiva e totalmente responsiva</strong
-                >, utilizando
-                <strong class="text-indigo-600">HTML, CSS</strong> e
-                <strong class="text-indigo-600">Tailwind CSS</strong> para
-                garantir uma ótima experiência em qualquer dispositivo.
+            <div class="p-5 flex flex-col flex-grow">
+              <h4 class="text-lg font-bold text-gray-800 mb-2">
+                🍬 Maravi Doces
+              </h4>
+              <p class="text-gray-600 text-sm mb-4">
+                Vitrine digital responsiva para doceria feita com HTML, CSS e
+                Tailwind.
               </p>
-
-              <div class="flex justify-between items-center">
+              <div class="flex flex-wrap gap-2 text-xs mb-4">
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >HTML</span
+                >
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >CSS</span
+                >
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                  >Tailwind</span
+                >
+              </div>
+              <div class="mt-auto">
                 <a
                   href="https://marividocegourmet.netlify.app/"
                   target="_blank"
-                  class="text-indigo-600 hover:text-indigo-800 font-semibold"
+                  class="inline-block bg-indigo-600 text-white px-4 py-2 text-sm rounded hover:bg-indigo-700"
                 >
-                  Acessar Site
+                  🔗 Ver Site
                 </a>
               </div>
             </div>
@@ -476,60 +538,61 @@
       </div>
     </section>
 
-    <footer
-      id="contato"
-      class="bg-gradient-to-tr from-indigo-800 to-indigo-600 text-white py-12 mt-20"
-    >
+    <footer id="contato" class="bg-black text-white py-16 mt-24">
       <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-3">Vamos nos conectar</h2>
-        <p class="text-gray-200 text-lg mb-8">
-          Me acompanhe nas redes sociais:
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+          Vamos nos Conectar
+        </h2>
+        <p class="text-gray-400 text-lg mb-10">
+          Siga nas redes sociais e acompanhe meu trabalho:
         </p>
 
-        <div class="flex justify-center gap-8 mb-8">
+        <div class="flex justify-center gap-8 mb-10">
           <a
             href="https://www.instagram.com/_thalissonmv/"
             target="_blank"
-            class="hover:scale-110 transition-transform duration-300"
+            class="group transition-transform duration-300 hover:scale-110"
             aria-label="Instagram"
           >
             <img
               src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=ffffff"
               alt="Instagram"
-              class="w-10 h-10"
+              class="w-10 h-10 opacity-80 group-hover:opacity-100 transition-opacity"
             />
           </a>
 
           <a
             href="https://www.linkedin.com/in/thalisson-moura-383ba4275"
             target="_blank"
-            class="hover:scale-110 transition-transform duration-300"
+            class="group transition-transform duration-300 hover:scale-110"
             aria-label="LinkedIn"
           >
             <img
               src="https://img.icons8.com/?size=100&id=13930&format=png&color=ffffff"
               alt="LinkedIn"
-              class="w-10 h-10"
+              class="w-10 h-10 opacity-80 group-hover:opacity-100 transition-opacity"
             />
           </a>
 
           <a
             href="https://github.com/Thalis78"
             target="_blank"
-            class="hover:scale-110 transition-transform duration-300"
+            class="group transition-transform duration-300 hover:scale-110"
             aria-label="GitHub"
           >
             <img
               src="https://img.icons8.com/?size=100&id=16318&format=png&color=ffffff"
               alt="GitHub"
-              class="w-10 h-10"
+              class="w-10 h-10 opacity-80 group-hover:opacity-100 transition-opacity"
             />
           </a>
         </div>
 
-        <div class="border-t border-white/20 pt-4">
-          <p class="text-sm text-gray-300">
-            &copy; 2025 Thalisson. Todos os direitos reservados.
+        <div class="border-t border-white/10 pt-6">
+          <p class="text-sm text-gray-500">
+            &copy; 2025
+            <span class="font-medium text-white">Thalisson Moura</span>. Todos
+            os direitos reservados.
           </p>
         </div>
       </div>
