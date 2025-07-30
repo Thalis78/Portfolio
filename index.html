@@ -1,402 +1,618 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio | Thalisson</title>
+    <title>Portfólio | Thalisson Moura</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/styles.css" />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
-      href="https://img.icons8.com/?size=100&id=Meg71w7epZVz&format=png&color=000000"
+      href="https://img.icons8.com/?size=100&id=Meg71w7epZVz&format=png&color=ffffff"
     />
   </head>
-
-  <body class="bg-gray-100 text-gray-900">
+  <body
+    class="bg-gradient-to-br from-gray-950 to-black text-gray-200 antialiased overflow-x-hidden"
+  >
     <header
-      class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-70 backdrop-blur-md"
+      class="fixed top-0 left-0 w-full z-50 bg-gray-950 bg-opacity-90 backdrop-blur-md shadow-lg transition-all duration-300"
     >
       <nav
         class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <h1 class="text-white text-3xl font-bold">Thalisson</h1>
+        <h1
+          class="text-white text-3xl md:text-4xl font-extrabold tracking-tight font-montserrat"
+        >
+          Thalisson
+        </h1>
 
-        <div class="menu-toggle md:hidden" id="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <button
+          class="menu-toggle md:hidden flex flex-col justify-between items-center w-8 h-6 cursor-pointer p-1 group"
+          id="menu-toggle"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span
+            class="block h-0.5 w-full bg-white rounded-full transition-all duration-300 ease-in-out group-[.active]:rotate-45 group-[.active]:translate-y-2.5"
+          ></span>
+          <span
+            class="block h-0.5 w-full bg-white rounded-full transition-all duration-300 ease-in-out group-[.active]:opacity-0"
+          ></span>
+          <span
+            class="block h-0.5 w-full bg-white rounded-full transition-all duration-300 ease-in-out group-[.active]:-rotate-45 group-[.active]:-translate-y-2.5"
+          ></span>
+        </button>
 
         <ul
-          class="nav-links hidden md:flex gap-6 text-sm font-medium text-gray-300 uppercase"
+          class="nav-links hidden md:flex gap-10 text-base font-medium text-gray-300 uppercase font-poppins"
         >
-          <li><a href="#home" class="hover:text-white transition">Home</a></li>
           <li>
-            <a href="#sobre" class="hover:text-white transition">Sobre</a>
+            <a
+              href="#home"
+              class="relative hover:text-purple-400 transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="#projetos" class="hover:text-white transition">Projetos</a>
+            <a
+              href="#sobre"
+              class="relative hover:text-purple-400 transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full"
+              >Sobre</a
+            >
           </li>
           <li>
-            <a href="#contato" class="hover:text-white transition">Contato</a>
+            <a
+              href="#projetos"
+              class="relative hover:text-purple-400 transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full"
+              >Projetos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contato"
+              class="relative hover:text-purple-400 transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full"
+              >Contato</a
+            >
           </li>
         </ul>
       </nav>
 
       <ul
-        class="nav-links md:hidden absolute right-6 top-20 text-white font-medium text-sm uppercase"
-      ></ul>
+        id="mobile-menu"
+        class="nav-links-mobile md:hidden absolute right-6 top-full bg-gray-800 bg-opacity-95 text-white font-medium text-base uppercase p-6 rounded-lg shadow-xl origin-top transition-all duration-300 ease-in-out scale-y-0 opacity-0 transform-gpu z-40"
+      >
+        <li>
+          <a
+            href="#home"
+            class="block py-2.5 px-4 hover:bg-gray-700 rounded-md transition-colors duration-200"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#sobre"
+            class="block py-2.5 px-4 hover:bg-gray-700 rounded-md transition-colors duration-200"
+            >Sobre</a
+          >
+        </li>
+        <li>
+          <a
+            href="#projetos"
+            class="block py-2.5 px-4 hover:bg-gray-700 rounded-md transition-colors duration-200"
+            >Projetos</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contato"
+            class="block py-2.5 px-4 hover:bg-gray-700 rounded-md transition-colors duration-200"
+            >Contato</a
+          >
+        </li>
+      </ul>
     </header>
 
     <section
       id="home"
-      class="relative min-h-screen flex items-center justify-center text-center text-white bg-cover bg-center"
+      class="relative flex min-h-screen items-center justify-center bg-cover bg-center text-center text-white"
       style="
-        background-image: url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1950&q=80');
+        background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
       "
     >
-      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-
       <div
-        class="relative z-10 px-6 max-w-xl mx-auto flex flex-col justify-center h-full"
+        class="absolute inset-0 bg-gradient-to-t from-gray-950 to-black/70"
+      ></div>
+      <div
+        class="relative z-10 flex h-full max-w-xl flex-col items-center justify-center px-6 pt-20"
       >
-        <h1 class="text-4xl md:text-6xl mb-6 leading-tight font-normal">
-          Olá, eu sou Thalisson
+        <p class="mb-4 font-light text-gray-300 md:text-2xl text-xl">
+          Olá, eu sou
+        </p>
+        <h1
+          class="mb-6 text-5xl font-extrabold leading-tight text-white drop-shadow-xl md:text-7xl"
+        >
+          Thalisson Moura
         </h1>
-        <p class="text-xl md:text-2xl mb-8 font-normal">
+        <p
+          class="mb-10 font-medium tracking-wide text-purple-400 md:text-3xl text-xl"
+        >
           Desenvolvedor Full Stack
         </p>
         <a
-          href="#sobre"
-          class="self-center bg-purple-600 hover:bg-purple-700 transition px-8 py-4 rounded-full text-white font-normal shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-400"
+          href="#projetos"
+          class="transform-gpu rounded-full bg-purple-600 px-12 py-4 text-lg text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-purple-700 hover:shadow-purple-500/40 focus:outline-none focus:ring-4 focus:ring-purple-400"
         >
-          Saiba mais
+          Meus Projetos
         </a>
       </div>
     </section>
-
-    <section id="sobre" class="py-24 px-6 max-w-7xl mx-auto">
-      <h3 class="text-center text-4xl font-semibold mb-12 text-gray-800">
-        SOBRE MIM:
-      </h3>
-      <div
-        class="flex flex-col md:flex-row items-center justify-between gap-12"
+    <section
+      id="sobre"
+      class="py-24 px-6 max-w-7xl mx-auto animate-fade-in-section"
+    >
+      <h3
+        class="text-center text-6xl font-extrabold text-white mb-16 font-montserrat"
       >
+        <span class="inline-block border-b-4 border-purple-500 pb-2">
+          SOBRE MIM
+        </span>
+      </h3>
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-16">
         <div
-          class="w-64 h-64 rounded-full overflow-hidden border-8 border-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl hover:scale-105 transition duration-300"
+          class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-purple-600 shadow-2xl transition-transform duration-300 transform rotate-3 hover:rotate-0 flex-shrink-0"
         >
           <img
             src="/imagens/me.jpeg"
-            alt="Sua Foto"
-            class="w-full h-full object-cover"
+            alt="Foto de perfil de Thalisson"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-gray-700 text-lg md:text-xl leading-relaxed mb-6">
+        <div class="flex-1 text-center md:text-left max-w-2xl">
+          <p
+            class="text-gray-300 text-lg md:text-xl leading-relaxed mb-6 text-justify"
+          >
             Sou estudante de
-            <strong class="text-indigo-600"
+            <strong class="text-purple-400"
               >Análise e Desenvolvimento de Sistemas</strong
-            >
-            e desenvolvedor Full Stack com experiência em projetos utilizando
-            <strong class="text-indigo-600">Java Spring</strong> e
-            <strong class="text-indigo-600">Django</strong> no backend,
-            <strong class="text-indigo-600">React</strong> e
-            <strong class="text-indigo-600">Next.js</strong> no frontend,
-            estilizados com
-            <strong class="text-indigo-600">Tailwind CSS</strong>, além de
-            bancos de dados relacionais como
-            <strong class="text-indigo-600">MySQL</strong> e
-            <strong class="text-indigo-600">PostgreSQL</strong>. Tenho
-            conhecimento em <strong class="text-indigo-600">Git</strong> para
-            controle de versões.
+            >, com uma paixão em construir soluções inovadoras e eficientes.
+            Minha jornada na programação me levou a explorar o universo
+            <strong class="text-purple-400">Full Stack</strong>, onde me sinto à
+            vontade para criar desde a infraestrutura do backend até as
+            interfaces mais interativas no frontend.
+          </p>
+          <p
+            class="text-gray-300 text-lg md:text-xl leading-relaxed mb-6 text-justify"
+          >
+            Minha expertise abrange o desenvolvimento de aplicações robustas com
+            <strong class="text-purple-400">Java Spring</strong> e
+            <strong class="text-purple-400">Django</strong>, garantindo sistemas
+            escaláveis e seguros. No lado do cliente, utilizo
+            <strong class="text-purple-400">React</strong> e
+            <strong class="text-purple-400">Next.js</strong> para construir
+            experiências de usuário ricas e dinâmicas, com estilização moderna
+            através do <strong class="text-purple-400">Tailwind CSS</strong>.
+          </p>
+          <p
+            class="text-gray-300 text-lg md:text-xl leading-relaxed text-justify"
+          >
+            Sou proficiente em bancos de dados relacionais como
+            <strong class="text-purple-400">MySQL</strong> e
+            <strong class="text-purple-400">PostgreSQL</strong>, e tenho forte
+            domínio de ferramentas de controle de versão como
+            <strong class="text-purple-400">Git</strong>, assegurando um fluxo
+            de trabalho colaborativo e organizado. Estou sempre buscando
+            aprender e aplicar novas tecnologias para resolver desafios
+            complexos.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="py-24 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-6">
-        <h3 class="text-center text-4xl font-semibold mb-12 text-gray-800">
-          MEUS CONHECIMENTOS:
+    <section
+      class="py-24 bg-gradient-to-br from-gray-950 to-gray-800 text-gray-100 min-h-screen flex flex-col justify-center items-center"
+    >
+      <div class="max-w-7xl mx-auto px-6 w-full">
+        <h3
+          class="text-center text-6xl font-extrabold text-white mb-16 font-montserrat"
+        >
+          <span class="inline-block border-b-4 border-purple-500 pb-2">
+            MEUS CONHECIMENTOS
+          </span>
         </h3>
 
-        <div class="overflow-x-auto bg-white rounded-xl shadow-lg p-6">
+        <div
+          class="overflow-hidden bg-gray-900 rounded-3xl shadow-2xl p-10 border border-purple-800 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-purple-500/30"
+        >
           <table class="min-w-full table-auto text-sm text-left">
-            <thead class="bg-gray-200 text-gray-800">
+            <thead
+              class="bg-gray-800 text-purple-400 border-b-2 border-purple-700"
+            >
               <tr>
-                <th class="px-6 py-3 text-lg font-medium">
+                <th class="px-8 py-5 text-2xl font-bold">
                   Área de Desenvolvimento
                 </th>
-                <th class="px-6 py-3 text-lg font-medium">Porcentagem</th>
+                <th class="px-8 py-5 text-2xl font-bold">Nível</th>
               </tr>
             </thead>
-            <tbody class="text-gray-700">
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 font-medium">Back-End</td>
-                <td class="px-6 py-4">
+            <tbody class="text-gray-200 divide-y divide-gray-700">
+              <tr
+                class="hover:bg-gray-800 transition-colors duration-300 ease-in-out"
+              >
+                <td class="px-8 py-6 font-medium text-xl">Back-End</td>
+                <td class="px-8 py-6">
                   <div
-                    class="w-full bg-gray-200 h-3 rounded-full overflow-hidden"
+                    class="w-full bg-gray-700 h-5 rounded-full overflow-hidden border border-gray-600"
                   >
-                    <div class="h-3 bg-indigo-600 w-3/4 rounded-full"></div>
+                    <div
+                      class="h-full bg-gradient-to-r from-purple-500 to-purple-700 w-[85%] rounded-full shadow-lg transition-all duration-700 ease-out"
+                    ></div>
                   </div>
-                  <p class="mt-2 text-right font-semibold">75%</p>
+                  <p class="mt-4 text-right font-extrabold text-white text-xl">
+                    85%
+                  </p>
                 </td>
               </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 font-medium">Banco de Dados</td>
-                <td class="px-6 py-4">
+              <tr
+                class="hover:bg-gray-800 transition-colors duration-300 ease-in-out"
+              >
+                <td class="px-8 py-6 font-medium text-xl">Banco de Dados</td>
+                <td class="px-8 py-6">
                   <div
-                    class="w-full bg-gray-200 h-3 rounded-full overflow-hidden"
+                    class="w-full bg-gray-700 h-5 rounded-full overflow-hidden border border-gray-600"
                   >
-                    <div class="h-3 bg-indigo-600 w-3/5 rounded-full"></div>
+                    <div
+                      class="h-full bg-gradient-to-r from-purple-500 to-purple-700 w-[70%] rounded-full shadow-lg transition-all duration-700 ease-out"
+                    ></div>
                   </div>
-                  <p class="mt-2 text-right font-semibold">60%</p>
+                  <p class="mt-4 text-right font-extrabold text-white text-xl">
+                    70%
+                  </p>
                 </td>
               </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 font-medium">Front-End</td>
-                <td class="px-6 py-4">
+              <tr
+                class="hover:bg-gray-800 transition-colors duration-300 ease-in-out"
+              >
+                <td class="px-8 py-6 font-medium text-xl">Front-End</td>
+                <td class="px-8 py-6">
                   <div
-                    class="w-full bg-gray-200 h-3 rounded-full overflow-hidden"
+                    class="w-full bg-gray-700 h-5 rounded-full overflow-hidden border border-gray-600"
                   >
-                    <div class="h-3 bg-indigo-600 w-1/2 rounded-full"></div>
+                    <div
+                      class="h-full bg-gradient-to-r from-purple-500 to-purple-700 w-[60%] rounded-full shadow-lg transition-all duration-700 ease-out"
+                    ></div>
                   </div>
-                  <p class="mt-2 text-right font-semibold">50%</p>
+                  <p class="mt-4 text-right font-extrabold text-white text-xl">
+                    60%
+                  </p>
                 </td>
               </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 font-medium">Design</td>
-                <td class="px-6 py-4">
+              <tr
+                class="hover:bg-gray-800 transition-colors duration-300 ease-in-out"
+              >
+                <td class="px-8 py-6 font-medium text-xl">Design</td>
+                <td class="px-8 py-6">
                   <div
-                    class="w-full bg-gray-200 h-3 rounded-full overflow-hidden"
+                    class="w-full bg-gray-700 h-5 rounded-full overflow-hidden border border-gray-600"
                   >
-                    <div class="h-3 bg-indigo-600 w-[40%] rounded-full"></div>
+                    <div
+                      class="h-full bg-gradient-to-r from-purple-500 to-purple-700 w-[50%] rounded-full shadow-lg transition-all duration-700 ease-out"
+                    ></div>
                   </div>
-                  <p class="mt-2 text-right font-semibold">40%</p>
+                  <p class="mt-4 text-right font-extrabold text-white text-xl">
+                    50%
+                  </p>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
+
       <br />
       <br />
-      <h3 class="text-center text-4xl font-semibold mb-8 text-gray-800">
-        TECNOLOGIAS/LINGUAGEM:
+      <br />
+
+      <h3
+        class="text-center text-5xl font-extrabold text-white mb-16 font-montserrat"
+      >
+        <span class="inline-block border-b-4 border-purple-500 pb-2">
+          TECNOLOGIAS/LINGUAGEM</span
+        >
       </h3>
-      <div class="max-w-[1000px] mx-auto px-4">
-        <div class="marquee-wrapper overflow-hidden">
-          <div class="marquee-content">
-            <div class="flex gap-10">
-              <template id="icons">
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-                      alt="Java"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">Java</span>
+      <div class="max-w-[1200px] mx-auto px-4 w-full">
+        <div class="marquee-wrapper overflow-hidden relative py-8">
+          <div class="marquee-content flex gap-16 animate-marquee">
+            <template id="icons">
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                    alt="Java"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >Java</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"
-                      alt="Spring"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">Spring</span>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"
+                    alt="Spring"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >Spring</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://img.icons8.com/?size=100&id=iWpVsSkAqPpZ&format=png&color=000000"
-                      alt="Java (Icons8)"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">Thymeleaf</span>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://img.icons8.com/?size=100&id=iWpVsSkAqPpZ&format=png&color=000000"
+                    alt="Thymeleaf"
+                    class="w-full h-full object-contain bg-gray-700 rounded-full p-1 filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >Thymeleaf</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
-                      alt="Git"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">Git</span>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+                    alt="Git"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >Git</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                      alt="Python"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">Python</span>
+              <div
+                class="flex flex-col items-center transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    alt="Python"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >Python</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-                      alt="Django"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">Django</span>
+              <div
+                class="flex flex-col items-center transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                    alt="Django"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >Django</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                      alt="JavaScript"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">JavaScript</span>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                    alt="JavaScript"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-                      alt="Typescript"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">Typescript</span>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >JavaScript</span
+                >
+              </div>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                    alt="Typescript"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >Typescript</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-                      alt="React"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">React</span>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+                    alt="React"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >React</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center bg-white rounded"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                      alt="Next.js"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">Next.js</span>
+              <div
+                class="flex flex-col items-center transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                    alt="Next.js"
+                    class="w-full h-full object-contain bg-gray-700 rounded-full p-1 filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >Next.js</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://camo.githubusercontent.com/abba501b95cfaf3f09d6547feb90ee82e26e92e273d23a057bd9d5a3e1e29b1c/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f7461696c77696e646373732f7461696c77696e646373732d6f726967696e616c2e737667"
-                      alt="Tailwind"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">Tailwind</span>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://camo.githubusercontent.com/abba501b95cfaf3f09d6547feb90ee82e26e92e273d23a057bd9d5a3e1e29b1c/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f7461696c77696e646373732f7461696c77696e646373732d6f726967696e616c2e737667"
+                    alt="Tailwind"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-                      alt="HTML5"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">HTML5</span>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >Tailwind</span
+                >
+              </div>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                    alt="HTML5"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >HTML5</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-                      alt="CSS3"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">CSS3</span>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                    alt="CSS3"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >CSS3</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
-                      alt="PostgreSQL"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">PostgreSQL</span>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
+                    alt="PostgreSQL"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >PostgreSQL</span
+                >
+              </div>
 
-                <div class="flex flex-col items-center text-black">
-                  <div
-                    class="w-16 h-16 overflow-hidden flex items-center justify-center"
-                  >
-                    <img
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-                      alt="MySQL"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span class="text-sm mt-1 text-center">MySQL</span>
+              <div
+                class="flex flex-col items-center text-white transform transition-all duration-300 hover:scale-110 group cursor-pointer"
+              >
+                <div
+                  class="w-24 h-24 overflow-hidden flex items-center justify-center mb-3 rounded-full bg-gray-800 border-2 border-purple-600 p-2 shadow-xl group-hover:border-purple-400 group-hover:bg-purple-900/50 transition-all duration-300"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                    alt="MySQL"
+                    class="w-full h-full object-contain filter drop-shadow-xl"
+                  />
                 </div>
-              </template>
+                <span
+                  class="text-lg font-semibold text-center text-purple-200 group-hover:text-white transition-colors duration-300"
+                  >MySQL</span
+                >
+              </div>
+            </template>
 
-              <div class="flex gap-20" id="icon-row-1"></div>
-              <div class="flex gap-20" id="icon-row-2"></div>
-            </div>
+            <div class="flex gap-16" id="icon-row-1"></div>
+            <div class="flex gap-16" id="icon-row-2"></div>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="projetos" class="py-24 px-6 bg-gray-50">
+    <section
+      id="projetos"
+      class="py-24 px-6 bg-gray-950 animate-fade-in-section"
+    >
       <div class="max-w-7xl mx-auto">
-        <h3 class="text-center text-5xl font-extrabold text-gray-800 mb-16">
-          <span class="inline-block border-b-4 border-indigo-500 pb-2"
+        <h3
+          class="text-center text-5xl font-extrabold text-white mb-16 font-montserrat"
+        >
+          <span class="inline-block border-b-4 border-purple-500 pb-2"
             >Meus Projetos</span
           >
         </h3>
@@ -405,173 +621,262 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"
         >
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden"
+            class="project-card bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden border border-gray-700 hover:border-purple-600"
           >
-            <a href="https://pizzariafav.com/favorita" target="_blank">
+            <a
+              href="https://pizzariafav.com/favorita"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full h-auto overflow-hidden"
+            >
               <img
                 src="imagens/pj04/img01.png"
                 alt="Pizzaria Favorita"
-                class="w-full aspect-[4/3] object-cover"
+                class="w-full aspect-[4/3] object-cover rounded-t-xl transition-transform duration-300 hover:scale-105"
               />
             </a>
             <div class="p-5 flex flex-col flex-grow">
               <h4
-                class="text-lg font-bold text-gray-800 flex items-center gap-2 mb-2"
+                class="text-xl font-bold text-white flex items-center gap-2 mb-2 font-montserrat"
               >
-                🍕 Pizzaria Favorita
+                Pizzaria Favorita
               </h4>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">
                 Sistema completo desenvolvido para uma pizzaria de Timon, com
-                autenticação, pedidos e painel admin. Java 17 + Spring Boot +
-                PostgreSQL.
+                autenticação, pedidos, painel administrativo e otimização de
+                fluxo.
               </p>
               <div class="flex flex-wrap gap-2 text-xs mb-4">
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
                   >Java</span
                 >
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
-                  >Spring</span
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >Spring Boot</span
                 >
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
-                  >Tailwind</span
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >Tailwind CSS</span
                 >
               </div>
-              <div class="mt-auto">
+              <div class="mt-auto flex gap-3">
                 <a
                   href="https://pizzariafav.com/favorita"
                   target="_blank"
-                  class="inline-block bg-indigo-600 text-white px-4 py-2 text-sm rounded hover:bg-indigo-700 transition"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center bg-purple-600 text-white px-5 py-2.5 text-sm rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-md"
                 >
-                  🔗 Ver Sites
+                  Ver Site
                 </a>
               </div>
             </div>
           </div>
-
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden"
+            class="project-card bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden border border-gray-700 hover:border-purple-600"
           >
             <a
-              href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git"
+              href="https://jogo-milhao.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full h-auto overflow-hidden"
             >
               <img
-                src="imagens/pj01/img01.png"
-                alt="Achados e Perdidos"
-                class="w-full aspect-[4/3] object-cover"
+                src="imagens/pj05/img01.png"
+                alt="Jogo do Milhão"
+                class="w-full aspect-[4/3] object-cover rounded-t-xl transition-transform duration-300 hover:scale-105"
               />
             </a>
             <div class="p-5 flex flex-col flex-grow">
-              <h4 class="text-lg font-bold text-gray-800 mb-2">
-                📂 Achados e Perdidos
+              <h4
+                class="text-xl font-bold text-white flex items-center gap-2 mb-2 font-montserrat"
+              >
+                Jogo do Milhão
               </h4>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                Sistema para gerenciar itens perdidos, com Spring Boot,
-                PostgreSQL e frontend JS puro.
+              <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">
+                Recriação do famoso jogo de perguntas e respostas, focando em
+                uma interface totalmente construída com Tailwind CSS para
+                prática de frontend.
               </p>
               <div class="flex flex-wrap gap-2 text-xs mb-4">
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
-                  >Spring</span
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >HTML</span
                 >
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
-                  >PostgreSQL</span
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >JavaScript</span
                 >
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
-                  >Vanilla JS</span
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >Tailwind CSS</span
                 >
               </div>
-              <div class="mt-auto">
+              <div class="mt-auto flex gap-3">
                 <a
-                  href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git"
+                  href="https://jogo-milhao.netlify.app/"
                   target="_blank"
-                  class="inline-block bg-indigo-600 text-white px-4 py-2 text-sm rounded hover:bg-indigo-700"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center bg-purple-600 text-white px-5 py-2.5 text-sm rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-md"
                 >
-                  🔗 Ver Repositório
+                  Ver Site
                 </a>
               </div>
             </div>
           </div>
-
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden"
+            class="project-card bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden border border-gray-700 hover:border-purple-600"
           >
             <a
               href="https://pj-curriculo-react-production.up.railway.app/"
               target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full h-auto overflow-hidden"
             >
               <img
                 src="imagens/pj03/img01.png"
                 alt="Currículo Interativo"
-                class="w-full aspect-[4/3] object-cover"
+                class="w-full aspect-[4/3] object-cover rounded-t-xl transition-transform duration-300 hover:scale-105"
               />
             </a>
             <div class="p-5 flex flex-col flex-grow">
-              <h4 class="text-lg font-bold text-gray-800 mb-2">
-                🧾 Currículo Interativo
+              <h4 class="text-xl font-bold text-white mb-2 font-montserrat">
+                Currículo Interativo
               </h4>
-              <p class="text-gray-600 text-sm mb-4">
-                Plataforma de criação de currículos com React, exportação em PDF
-                e edição ao vivo.
+              <p class="text-gray-300 text-sm mb-4 flex-grow">
+                Plataforma dinâmica para criação de currículos com edição ao
+                vivo e exportação para PDF, facilitando a personalização.
               </p>
               <div class="flex flex-wrap gap-2 text-xs mb-4">
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
                   >React</span
                 >
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
-                  >Tailwind</span
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >Tailwind CSS</span
                 >
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
                   >PDF</span
                 >
               </div>
-              <div class="mt-auto">
+              <div class="mt-auto flex gap-3">
                 <a
-                  href="https://github.com/Thalis78/PJ-CURRICULO-REACT.git"
+                  href="https://pj-curriculo-react-production.up.railway.app/"
                   target="_blank"
-                  class="inline-block bg-indigo-600 text-white px-4 py-2 text-sm rounded hover:bg-indigo-700"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center bg-purple-600 text-white px-5 py-2.5 text-sm rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-md"
                 >
-                  🔗 Ver Repositório
+                  Ver Site
                 </a>
               </div>
             </div>
           </div>
 
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden"
+            class="project-card bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden border border-gray-700 hover:border-purple-600"
           >
-            <a href="https://marividocegourmet.netlify.app/" target="_blank">
+            <a
+              href="https://marividocegourmet.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full h-auto overflow-hidden"
+            >
               <img
                 src="imagens/pj02/img01.png"
                 alt="Maravi Doces"
-                class="w-full aspect-[4/3] object-cover"
+                class="w-full aspect-[4/3] object-cover rounded-t-xl transition-transform duration-300 hover:scale-105"
               />
             </a>
             <div class="p-5 flex flex-col flex-grow">
-              <h4 class="text-lg font-bold text-gray-800 mb-2">
-                🍬 Maravi Doces
+              <h4 class="text-xl font-bold text-white mb-2 font-montserrat">
+                Maravi Doces
               </h4>
-              <p class="text-gray-600 text-sm mb-4">
-                Vitrine digital responsiva para doceria feita com HTML, CSS e
-                Tailwind.
+              <p class="text-gray-300 text-sm mb-4 flex-grow">
+                Vitrine digital e responsiva para uma doceria, destacando
+                produtos e informações de contato com design agradável.
               </p>
               <div class="flex flex-wrap gap-2 text-xs mb-4">
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
                   >HTML</span
                 >
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
                   >CSS</span
                 >
-                <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded"
-                  >Tailwind</span
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >Tailwind CSS</span
                 >
               </div>
-              <div class="mt-auto">
+              <div class="mt-auto flex gap-3">
                 <a
                   href="https://marividocegourmet.netlify.app/"
                   target="_blank"
-                  class="inline-block bg-indigo-600 text-white px-4 py-2 text-sm rounded hover:bg-indigo-700"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center bg-purple-600 text-white px-5 py-2.5 text-sm rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-md"
                 >
-                  🔗 Ver Site
+                  Ver Site
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-[1.03] flex flex-col overflow-hidden border border-gray-700 hover:border-purple-600"
+          >
+            <a
+              href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full h-auto overflow-hidden"
+            >
+              <img
+                src="imagens/pj01/img01.png"
+                alt="Achados e Perdidos"
+                class="w-full aspect-[4/3] object-cover rounded-t-xl transition-transform duration-300 hover:scale-105"
+              />
+            </a>
+            <div class="p-5 flex flex-col flex-grow">
+              <h4 class="text-xl font-bold text-white mb-2 font-montserrat">
+                Achados e Perdidos
+              </h4>
+              <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">
+                Sistema para gerenciar itens perdidos e encontrados, facilitando
+                a recuperação e organização de objetos.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs mb-4">
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >Spring Boot</span
+                >
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="bg-purple-800 text-purple-100 px-3 py-1 rounded-full font-medium"
+                  >Vanilla JS</span
+                >
+              </div>
+              <div class="mt-auto flex gap-3">
+                <a
+                  href="https://github.com/Thalis78/SISTEMAACHADOSEPERDIDOS.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center bg-gray-700 text-white px-5 py-2.5 text-sm rounded-full hover:bg-gray-600 transition-colors duration-300 shadow-md"
+                >
+                  <img
+                    src="https://img.icons8.com/?size=100&id=16318&format=png&color=ffffff"
+                    alt="GitHub"
+                    class="w-4 h-4 mr-2"
+                  />
+                  Ver Repositório
                 </a>
               </div>
             </div>
@@ -580,24 +885,31 @@
       </div>
     </section>
 
-    <footer id="contato" class="bg-black text-white py-16 mt-24">
+    <footer
+      id="contato"
+      class="bg-gradient-to-t from-gray-900 to-black text-white py-16 mt-24"
+    >
       <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
-          Vamos nos Conectar
+        <h2
+          class="text-3xl md:text-4xl font-extrabold mb-4 text-white font-montserrat"
+        >
+          Vamos nos Conectar!
         </h2>
         <p class="text-gray-400 text-lg mb-10">
-          Siga nas redes sociais e acompanhe meu trabalho:
+          Sinta-se à vontade para entrar em contato ou me seguir nas redes
+          sociais:
         </p>
 
         <div class="flex justify-center gap-8 mb-10">
           <a
             href="https://www.instagram.com/_thalissonmv/"
             target="_blank"
+            rel="noopener noreferrer"
             class="group transition-transform duration-300 hover:scale-110"
             aria-label="Instagram"
           >
             <img
-              src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=ffffff"
+              src="https://img.icons8.com/ios-filled/100/ffffff/instagram-new.png"
               alt="Instagram"
               class="w-10 h-10 opacity-80 group-hover:opacity-100 transition-opacity"
             />
@@ -606,11 +918,12 @@
           <a
             href="https://www.linkedin.com/in/thalisson-moura-383ba4275"
             target="_blank"
+            rel="noopener noreferrer"
             class="group transition-transform duration-300 hover:scale-110"
             aria-label="LinkedIn"
           >
             <img
-              src="https://img.icons8.com/?size=100&id=13930&format=png&color=ffffff"
+              src="https://img.icons8.com/ios-filled/100/ffffff/linkedin.png"
               alt="LinkedIn"
               class="w-10 h-10 opacity-80 group-hover:opacity-100 transition-opacity"
             />
@@ -619,11 +932,12 @@
           <a
             href="https://github.com/Thalis78"
             target="_blank"
+            rel="noopener noreferrer"
             class="group transition-transform duration-300 hover:scale-110"
             aria-label="GitHub"
           >
             <img
-              src="https://img.icons8.com/?size=100&id=16318&format=png&color=ffffff"
+              src="https://img.icons8.com/ios-filled/100/ffffff/github.png"
               alt="GitHub"
               class="w-10 h-10 opacity-80 group-hover:opacity-100 transition-opacity"
             />
