@@ -16,18 +16,19 @@ document.querySelectorAll("img").forEach((img) => {
     img.classList.add("animated-click");
   });
 });
-const toggle = document.getElementById("menu-toggle");
-const nav = document.querySelector(".nav-links.md\\:hidden");
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
 
-nav.innerHTML = `
-  <li><a href="#home" class="hover:text-blue-400 block py-2">Home</a></li>
-  <li><a href="#sobre" class="hover:text-blue-400 block py-2">Sobre</a></li>
-  <li><a href="#projetos" class="hover:text-blue-400 block py-2">Projetos</a></li>
-  <li><a href="#contato" class="hover:text-blue-400 block py-2">Contato</a></li>
+menuToggle.addEventListener("click", () => {
+  const isActive = menuToggle.classList.toggle("active");
 
-`;
-
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");
-  nav.classList.toggle("active");
+  if (isActive) {
+    mobileMenu.classList.add("scale-y-100", "opacity-100");
+    mobileMenu.classList.remove("scale-y-0", "opacity-0");
+    menuToggle.setAttribute("aria-expanded", "true");
+  } else {
+    mobileMenu.classList.remove("scale-y-100", "opacity-100");
+    mobileMenu.classList.add("scale-y-0", "opacity-0");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
 });
